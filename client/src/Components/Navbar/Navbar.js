@@ -4,6 +4,8 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import 'popper.js/dist/popper.min.js'
 import 'jquery/dist/jquery.min.js';
 
+
+
 import './Navbar.css'
 import {
     BrowserRouter as Router,
@@ -21,19 +23,35 @@ function Navbar() {
     return (
         <div>
             <nav className="navbar navbar-expand-sm navbar-dark fixed-top">
-                <Link to="/#"><label className="navbar-brand logo">MSITube</label></Link>
+                <label className="navbar-brand logo">MSITube</label>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul className="navbar-nav ml-auto text-center menu">
+                         
                         <Link to="/Home"><li className="nav-item"><HomeIcon /> Home</li></Link>
-                        <Link to="/Placements"><li className="nav-item"><BusinessIcon />About</li></Link>
-                        <Link to="#"><li className="nav-item"><FileCopyIcon /> Data</li></Link>
+                        {/* <Link to="/Pdf"><li className="nav-item"><HomeIcon /> Files</li></Link>
+                        */}
+                        <Link to="Feedback"><li className="nav-item"><FileCopyIcon />Feedback</li></Link>
                         <Link to="/Login"><li className="nav-item"><ExitToAppIcon /> Login</li></Link>
-                        <Link to="/Signup"><li className="nav-item"><ExitToAppIcon /> Signup</li></Link>
+                        
+                        
+                            
                     </ul>
-                </div>  
+
+                    
+                </div> 
+                
+                 
+
+                
+
+
+
+
+
+                 
             </nav>
         </div>
     )
